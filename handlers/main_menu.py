@@ -14,6 +14,11 @@ from utils.entities_utils import recover_entities, save_entities
 from enums import BaseCB
 
 
+# @dp.message()
+# async def com_start(msg: Message, state: FSMContext):
+#     print(msg.photo[-1].file_id)
+
+
 # команда старт
 @dp.message(CommandStart())
 async def com_start(msg: Message, state: FSMContext):
@@ -33,15 +38,19 @@ async def com_start(msg: Message, state: FSMContext):
 @dp.message(lambda msg: msg.content_type == ContentType.CONTACT)
 async def take_contact(msg: Message):
     await db.update_user(user_id=msg.from_user.id, phone=msg.contact.phone_number)
-    text = ('Спасибо, что поделились своим контактом! '
-            'Завтра мы отправим вам ссылку на фотоотчет с мероприятия, а пока расскажем немного о клубе ⤵️\n\n\n'
-            'Бизнес-сообщество Forbes Club объединяет экспертных представителей разных отраслей экономики страны, '
-            'оказывающих на нее непосредственное влияние.\n\n'
-            'Резиденты клуба имеют возможность расширять контакты и обмениваться опытом с ведущими игроками '
-            'рынка, посещать закрытые мероприятия и заявлять о своих проектах на площадках Forbes.')
+    text = ('Спасибо, что поделились своим контактом! \n'
+            'Завтра мы отправим вам ссылку на фотоотчет с мероприятия, а пока расскажем немного о клубе  ⤵️ \n\n'
+            '<b>Бизнес-сообщество Forbes Club</b> объединяет экспертных представителей разных отраслей экономики '
+            'страны, оказывающих на нее непосредственное влияние.\n\n'
+            'Резиденты клуба имеют возможность \n'
+            '▫️ расширять контакты \n'
+            '▫️ обмениваться опытом с ведущими игроками рынка\n'
+            '▫️ посещать закрытые мероприятия\n'
+            '▫️ заявлять о своих проектах на площадках Forbes\n\n'
+            'Нажмите кнопку <u>«Вступить в клуб»</u> и узнайте подробности ⤵️')
 
     await msg.answer_photo(
-        photo='AgACAgIAAxkBAAM_Zipdk2lGEELXAyAFD8H3lnwamIUAAvHXMRsw8FFJUf8ToEemWhgBAAMCAAN5AAM0BA',
+        photo='AgACAgIAAxkBAANQZipljN7Y1hqOG6WRzTE9PPC2xJ0AAlnfMRt8FlFJ8pOp_ccc3vMBAAMCAAN5AAM0BA',
         caption=text,
         reply_markup=kb.get_url_kb()
     )
