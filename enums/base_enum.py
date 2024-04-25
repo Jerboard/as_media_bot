@@ -2,7 +2,7 @@ from enum import Enum
 
 
 class UserButton(str, Enum):
-    MAIN = '📞 Отправить контакт'
+    MAIN = 'Поделиться'
 
 
 group_user = {

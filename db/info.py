@@ -39,9 +39,7 @@ async def update_info(
     if photo_id:
         query = query.values(photo_id=photo_id)
     if text:
-        query = query.values(text=text)
-    if entities:
-        query = query.values(entities=entities)
+        query = query.values(text=text, entities=entities)
 
     async with begin_connection() as conn:
         await conn.execute(query)

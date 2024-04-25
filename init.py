@@ -46,5 +46,5 @@ def log_error(message, with_traceback: bool = True):
 
 async def set_up_menu() -> None:
     await bot.set_my_commands(
-        [types.BotCommand(command="start", description=" 🔄Обновить")]
+        [types.BotCommand(command="start", description="🔄 Обновить")]
     )
