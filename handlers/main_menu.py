@@ -40,7 +40,7 @@ async def take_contact(msg: Message):
             'Резиденты клуба имеют возможность расширять контакты и обмениваться опытом с ведущими игроками '
             'рынка, посещать закрытые мероприятия и заявлять о своих проектах на площадках Forbes.')
 
-    await msg.answer(text)
+    await msg.answer(text, reply_markup=kb.get_url_kb())
 
 
 # Отмена

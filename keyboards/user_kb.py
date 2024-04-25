@@ -14,7 +14,7 @@ def get_main_user_kb():
     )
 
 
-def get_cancel_admin_kb() -> InlineKeyboardMarkup:
+def get_url_kb() -> InlineKeyboardMarkup:
     kb = InlineKeyboardBuilder()
     kb.button(text='Вступить в Forbes Club', url=f'https://b24-hi5302.bitrix24.site')
     return kb.adjust(1).as_markup()
