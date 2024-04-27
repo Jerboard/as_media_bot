@@ -55,7 +55,11 @@ async def take_contact(msg: Message):
         reply_markup=kb.get_url_kb()
     )
 
-    await sleep(300)
+    await sleep(60)
+    await sleep(60)
+    await sleep(60)
+    await sleep(60)
+    await sleep(60)
     text = ('Первая часть фотографий уже доступна по ссылке \n\n'
             'Нажми ⤵️\n'
             'https://disk.yandex.ru/d/9ZlULYbRkUlHUw\n\n'
@@ -63,7 +67,16 @@ async def take_contact(msg: Message):
             'Эти фото были сняты на Samsung Galaxy S24 Ultra во время вечера, они точно порадуют вас своим потрясным качеством!🔥 \n\n'
             'И на этом сюрпризы от партнера не заканчиваются…')
     await msg.answer(text)
-    await sleep (600)
+    await sleep (60)
+    await sleep (60)
+    await sleep (60)
+    await sleep (60)
+    await sleep (60)
+    await sleep (60)
+    await sleep (60)
+    await sleep (60)
+    await sleep (60)
+    await sleep (60)
     text = ('Крутейшие фотки, снятые на флагманский смартфон уже готовы! 🤩\n'
             'Забирайте их и эксклюзивный подарок от фирменного магазина Samsung Galaxystore 🎁')
     await msg.answer(text=text, reply_markup=kb.get_send_kb())
