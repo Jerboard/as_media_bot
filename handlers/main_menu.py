@@ -72,11 +72,6 @@ async def take_contact(msg: Message):
     await sleep (60)
     await sleep (60)
     await sleep (60)
-    await sleep (60)
-    await sleep (60)
-    await sleep (60)
-    await sleep (60)
-    await sleep (60)
     text = ('Крутейшие фотки, снятые на флагманский смартфон уже готовы! 🤩\n'
             'Забирайте их и эксклюзивный подарок от фирменного магазина Samsung Galaxystore 🎁')
     await msg.answer(text=text, reply_markup=kb.get_send_kb())
